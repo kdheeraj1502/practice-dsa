@@ -6,7 +6,7 @@ public class PrintSequenceBy3Threads extends Thread {
     public void run() {
         while (true) {
             try {
-                Thread.sleep(1000);
+                Thread.sleep(500);
                 synchronized (this) {
                     if(count % 3 == Integer.parseInt(Thread.currentThread().getName())){
                         System.out.println("Count is : " + count);

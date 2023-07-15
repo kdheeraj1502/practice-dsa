@@ -48,8 +48,6 @@ public class ReArrangeMaxMinArray {
         System.out.print("\nModified Array\n");
         for (int i = 0; i < n; i++)
             System.out.print(arr[i] + " ");
-
-
     }
 }
 

@@ -7,7 +7,7 @@ public class StringToListOfChars {
 
     public static void main(String[] args) {
         String str = "Geeks";
-        System.out.println(str.chars().mapToObj(c -> Character.valueOf((char) c)).collect(Collectors.toList()));
+        System.out.println(Arrays.toString(str.chars().mapToObj(c -> Character.valueOf((char) c)).collect(Collectors.toList()).toArray()));
 
     }
 }

@@ -1,9 +1,7 @@
 package java8.stream;
 
 import java.util.*;
-import java.util.function.Function;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class FindDuplicateElements {
@@ -19,16 +17,5 @@ public class FindDuplicateElements {
             if(!list.add(nu)) {
                 System.out.println(nu);
             }
-        };
-
-
-       List<Integer> duplicates =  Arrays.stream(nums).boxed()
-                .collect(Collectors.groupingBy(Function.identity(),LinkedHashMap::new, Collectors.counting()))
-                        .entrySet().stream().filter(entry -> entry.getValue()>1l)
-                        .map(Map.Entry::getKey)
-                                .collect(Collectors.toList());
-
-        System.out.println(duplicates);
-
-
+        }
     }}
