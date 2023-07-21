@@ -1,6 +1,8 @@
+package bit.manupulation;
+
 import java.util.*;
 
-public class Permutations {
+public class Permutations1 {
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         permute(nums, result, new ArrayList<>(), 0);

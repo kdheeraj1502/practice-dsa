@@ -9,6 +9,10 @@ public class SquareOfNumber {
         if (n < 0)
             n = -n;
         int x = n >> 1;
+        // n = 2x => x =>  n/2;
+        // n2 = 4x2 => 4 * n2/4
+        // n = 2x + 1 =>   x = (n - 1)/2;
+        // n2 = 4x2 + 4x + 1
         if (n % 2 != 0) {
             int sqr = square(x);
             int first = (sqr << 2);
@@ -26,11 +30,9 @@ public class SquareOfNumber {
     public static void main(String[] args) {
         System.out.println(square1(5));
     }
-// 0101
-
     /**
-     *
-     *
+ 0101
+     5 * 2^0 + 5 * 4
      */
     static int square1(int n)
     {
@@ -58,5 +60,10 @@ public class SquareOfNumber {
             ans += input;
         }
         return ans;
+    }
+
+    static int squareRec(int n)
+    {
+        return squareRec(n );
     }
 }

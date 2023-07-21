@@ -1,8 +1,9 @@
-package dynamic;
+package recursion;
 
 import java.util.*;
 
-public class Permutation2Leetcode {
+public class Permutation2Leetcode2 {
+
 
     static List<List<Integer>> result;
     static boolean[] used;

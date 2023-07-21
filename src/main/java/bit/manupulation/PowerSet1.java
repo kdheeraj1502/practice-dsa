@@ -1,6 +1,8 @@
+package bit.manupulation;
+
 import java.util.*;
 
-public class PowerSet {
+public class PowerSet1 {
     public static List<String> allPossibleStrings(String s)
     {
         int len = s.length();

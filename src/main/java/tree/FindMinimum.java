@@ -1,6 +1,5 @@
 package tree;
 
-import sun.reflect.generics.tree.Tree;
 
 public class FindMinimum {
    static int minValue(TreeNode node) {

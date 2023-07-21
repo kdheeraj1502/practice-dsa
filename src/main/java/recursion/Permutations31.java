@@ -1,6 +1,8 @@
+package recursion;
+
 import java.util.*;
 
-public class Permutations {
+public class Permutations31 {
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         permute(nums, result, new ArrayList<>(), 0);
