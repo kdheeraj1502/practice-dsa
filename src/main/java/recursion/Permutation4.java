@@ -1,9 +1,8 @@
-package dynamic;
+package recursion;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
-public class Permutation {
+public class Permutation4 {
     public static List<List<String>> permutation(String num[]) {
         List<List<String>> result = new ArrayList<>();
         permutation(num, result, 0);

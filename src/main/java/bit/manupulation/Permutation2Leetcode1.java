@@ -1,8 +1,8 @@
-package dynamic;
+package bit.manupulation;
 
 import java.util.*;
 
-public class Permutation2Leetcode {
+public class Permutation2Leetcode1 {
 
     static List<List<Integer>> result;
     static boolean[] used;

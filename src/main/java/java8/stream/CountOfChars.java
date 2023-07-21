@@ -1,8 +1,5 @@
 package java8.stream;
 
-import jdk.nashorn.internal.objects.annotations.Function;
-import sun.security.pkcs11.wrapper.Functions;
-
 import java.util.*;
 import java.util.stream.Collectors;
 
