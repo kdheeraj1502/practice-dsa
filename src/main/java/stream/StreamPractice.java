@@ -1,10 +1,7 @@
 package stream;
 
-import javax.swing.*;
-import java.sql.SQLOutput;
 import java.util.*;
 import java.util.function.Function;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -68,7 +65,7 @@ public class StreamPractice {
 
         // find the first repeated character in it using Stream functions?
         System.out.println("find the first repeated character in it using Stream functions?");
-        Character resutl2 = input.chars().mapToObj(s->Character.toLowerCase(Character.valueOf((char) s)))
+        Character resutl2 = input.chars().mapToObj(s->Character.toLowerCase(Character.toLowerCase((char) s)))
                 .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()))
                 .entrySet().stream()
                 .filter(entry -> entry.getValue()>1L)
@@ -104,7 +101,7 @@ public class StreamPractice {
         System.out.println(" Given a list of integers, sort all the values present in it using Stream functions?");
         List<Integer> myList = Arrays.asList(10,15,8,49,25,98,98,32,15);
 
-        List<Integer> sortedList = list.stream().sorted().collect(Collectors.toList());
+        List<Integer> sortedList = myList.stream().sorted().collect(Collectors.toList());
         System.out.println(sortedList);
 
         //Given a list of integers, sort all the values present in it in descending order using Stream functions?
@@ -183,6 +180,15 @@ public class StreamPractice {
         Optional.ofNullable(names2).orElseGet(Collections::emptyList)
                 .stream().filter(Objects::nonNull)
                 . forEach(System.out::println);
+
+        //display the longest string
+        List<String> words = Arrays.asList("GFG", "Geeks", "for",
+                "GeeksQuiz", "GeeksforGeeks");
+        System.out.println(words.stream().reduce((word1, word2)-> word1.length()> word2.length() ? word1 : word2).get());;
+
+        List<Integer> listOfNumbers = Arrays.asList(1, 2, 3, 4);
+        int sum = listOfNumbers.parallelStream().reduce(0, Integer::sum) + 5;
+        System.out.println(sum);
 
     }
 
