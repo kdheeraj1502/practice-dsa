@@ -1,5 +1,6 @@
 package java8.stream;
 
+import com.sun.javafx.binding.StringFormatter;
 
 import java.util.stream.IntStream;
 
