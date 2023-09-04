@@ -1,4 +1,4 @@
-package immutable;
+package String.immutable;
 
 public final class Address implements Cloneable{
 
