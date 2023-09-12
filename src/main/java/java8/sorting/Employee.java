@@ -7,9 +7,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Employee {
-    public int id;
-    public String name;
-    public int salary;
+    private int id;
+    private String name;
+    private int salary;
 
     Employee( int id, String name, int salary){
         this.id= id;
@@ -57,11 +57,17 @@ public class Employee {
         Employee e3 = new Employee(103, "Ajay", 1300);
 
         List<Employee> employeeList = Arrays.asList(e1, e0, e2, e3);
-        Comparator<Employee> bySalary = (o1, o2) -> o1.salary - o2.salary;
-        Comparator<Employee> byName = (o1, o2) -> o1.name.compareTo(o2.name);
-        List<Employee> result =  employeeList.stream().sorted(bySalary).sorted(byName).collect(Collectors.toList());
-        List<Employee> output =  employeeList.stream().sorted(Comparator.comparingInt(Employee::getSalary)).collect(Collectors.toList());
-        System.out.println("output " + output);
+//        Comparator<Employee> bySalary = (o1, o2) -> o1.salary - o2.salary;
+//        Comparator<Employee> byName = (o1, o2) -> o1.name.compareTo(o2.name);
+//        List<Employee> result =  employeeList.stream().sorted(bySalary).sorted(byName).collect(Collectors.toList());
+//        List<Employee> output =  employeeList.stream().sorted(Comparator.comparingInt(Employee::getSalary)).collect(Collectors.toList());
+//        System.out.println("output " + output);
+
+        Comparator<Employee> bySalary = ((o1, o2) ->o1.getSalary() - o2.getSalary());
+        Comparator<Employee> byName = (o1, o2) ->o1.getName().compareTo(o2.getName());
+
+        List<Employee> output = employeeList.stream().sorted(byName).sorted(bySalary).collect(Collectors.toList());
+        System.out.println(output);
 
 
 
@@ -70,7 +76,7 @@ public class Employee {
         map.put(e2,2);
         map.put(e3,3);
         map.put(e1,4);
-        Comparator<Map.Entry<Employee, Integer>> bySalaryMap = (o1, o2) -> o1.getKey().salary - o2.getKey().salary;
+        Comparator<Map.Entry<Employee, Integer>> bySalaryMap = (o1, o2)-> o1.getKey().salary - o2.getKey().getSalary();
         Map<Employee, Integer> mapResult = map.entrySet().stream().sorted(bySalaryMap).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,
                (o1, o2) -> o1, LinkedHashMap::new));
         System.out.println("mapResult " + mapResult);

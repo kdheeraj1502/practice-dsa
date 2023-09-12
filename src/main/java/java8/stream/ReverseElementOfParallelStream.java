@@ -12,5 +12,11 @@ public class ReverseElementOfParallelStream {
                     return list;
                 }));
         System.out.println(result);
+
+        List<Integer> ans = lists.parallelStream().collect(Collectors.collectingAndThen(Collectors.toList(),
+                list -> {
+            Collections.reverse(list);
+            return list;
+                }));
     }
 }

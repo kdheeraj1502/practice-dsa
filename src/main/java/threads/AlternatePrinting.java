@@ -1,70 +1,58 @@
 package threads;
 
-public class AlternatePrinting extends Thread {
+public class AlternatePrinting {
     private static final Object lock = new Object();
-    private static boolean isThread1Turn = true;
-
-    @Override
-    public void run(){
-        while (true) {
-            synchronized (lock) {
-                try {
-                    if (!isThread1Turn) {
-                        lock.wait();
-                    }
-                    System.out.print("A ");
-                    isThread1Turn = false;
-                    lock.notify();
-                    Thread.sleep(500); // Pause for 2 seconds
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
+    private static volatile boolean isThread1Turn = true;
 
     public static void main(String[] args) {
-        Thread thread1 = new Thread(() -> printA());
-        Thread thread2 = new Thread(() -> printB());
-
-        thread1.start();
-        thread2.start();
-    }
-
-    public static void printA() {
-        while (true) {
-            synchronized (lock) {
-                try {
-                    if (!isThread1Turn) {
-                        lock.wait();
+        Thread t1 = new Thread(() -> {
+            while (true) {
+                synchronized (lock) {
+                    while (!isThread1Turn) {
+                        try {
+                            lock.wait();
+                        } catch (InterruptedException e) {
+                            System.out.println("Thread 1 got interrupted");
+                        }
                     }
-                    System.out.print("A ");
+                    System.out.println("A");
+                    try {
+                        Thread.sleep(500);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                     isThread1Turn = false;
                     lock.notify();
-                    Thread.sleep(500); // Pause for 2 seconds
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
                 }
             }
-        }
-    }
+        });
 
-    public static void printB() {
-        while (true) {
-            synchronized (lock) {
-                try {
-                    if (isThread1Turn) {
-                        lock.wait();
+        Thread t2 = new Thread(() -> {
+            while (true) {
+                synchronized (lock) {
+                    while (isThread1Turn) {
+                        try {
+                            lock.wait();
+                        } catch (InterruptedException e) {
+                            System.out.println("Thread 2 got interrupted");
+                        }
                     }
-                    System.out.print("B ");
+                    System.out.println("B");
+                    try {
+                        Thread.sleep(500);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                     isThread1Turn = true;
                     lock.notify();
-                    Thread.sleep(500); // Pause for 2 seconds
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
                 }
             }
-        }
+        });
+
+        t1.start();
+        t2.start();
     }
 }
+
+
 
