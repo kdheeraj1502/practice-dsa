@@ -1,0 +1,20 @@
+
+F	java:S106"+Replace this use of System.out by a logger.(†è–t8—£ ‰¯1
+G	java:S106"+Replace this use of System.out by a logger.(Í¸èÅ8˜£ ‰¯1
+L	java:S106"+Replace this use of System.out by a logger.(ªÓ¼áþÿÿÿÿ8˜£ ‰¯1
+G	java:S106"+Replace this use of System.out by a logger.(¶ç®Â8˜£ ‰¯1
+G	java:S106"+Replace this use of System.out by a logger.(µ¥°£8˜£ ‰¯1
+L
+java:S1197"*Move the array designators [] to the type.( ã´Óüÿÿÿÿ8™£ ‰¯1
+]	java:S125#"<This block of commented-out lines of code should be removed.(¾ìˆÌùÿÿÿÿ8™£ ‰¯1
+X	java:S1250"<This block of commented-out lines of code should be removed.(åÉ»þ8™£ ‰¯1
+v
+java:S30124"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(´°©Ç8™£ ‰¯1
+X	java:S1259"<This block of commented-out lines of code should be removed.(Áª–Û8š£ ‰¯1
+L
+java:S1197="*Move the array designators [] to the type.(Â¹‹§þÿÿÿÿ8š£ ‰¯1
+G
+java:S1197>"*Move the array designators [] to the type.(ÛÌ½Á8š£ ‰¯1
+]	java:S125@"<This block of commented-out lines of code should be removed.(žé°Äøÿÿÿÿ8š£ ‰¯1
+v
+java:S3012N"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(´°©Ç8š£ ‰¯1

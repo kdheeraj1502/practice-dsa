@@ -1,0 +1,12 @@
+
+C
+java:S1604
+"(Make this anonymous inner class a lambda(Ş¾‹¦üÿÿÿÿ
+k
+java:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(íÒèÃúÿÿÿÿ
+?
+java:S1197	"*Move the array designators [] to the type.(Ú‚™W
+@	java:S106"+Replace this use of System.out by a logger.(µ†›†
+E	java:S106!"+Replace this use of System.out by a logger.(éÚÔûÿÿÿÿ
+@
+java:S1197'"*Move the array designators [] to the type.(¤â“Ü

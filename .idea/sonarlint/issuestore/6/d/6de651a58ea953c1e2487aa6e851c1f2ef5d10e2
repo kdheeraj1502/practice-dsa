@@ -1,0 +1,25 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(…ß
+\
+java:S2259	"AA "NullPointerException" could be thrown; "arr" is nullable here.(úÄ©´ÿÿÿÿÿ
+P
+java:S1854	"5Remove this useless assignment to local variable "b".(úÄ©´ÿÿÿÿÿ
+P
+java:S1854"5Remove this useless assignment to local variable "a".(çÝðÌùÿÿÿÿ
+A
+java:S1481"&Remove this unused "a" local variable.(çÝðÌùÿÿÿÿ
+@
+java:S1197"*Move the array designators [] to the type.(‹ð’ˆ
+2
+java:S1116"Remove this empty statement.(‹ð’ˆ
+A
+java:S1481	"&Remove this unused "b" local variable.(úÄ©´ÿÿÿÿÿ
+E
+java:S1197"*Move the array designators [] to the type.(›ºÑ•ÿÿÿÿÿ
+7
+java:S2129"!Remove this "Integer" constructor(Ï‚³•
+E
+java:S1874"/Remove this use of "Integer"; it is deprecated.(Ï‚³•
+T
+java:S1155">Use isEmpty() to check whether the collection is empty or not.(üÁºˆ
+?	java:S106"+Replace this use of System.out by a logger.(½ëž[
