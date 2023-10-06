@@ -1,0 +1,23 @@
+
+m	java:S1174"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€Éûğ8Š”Ã¤®1
+r	java:S1175"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚœÔ…ûÿÿÿÿ8Š”Ã¤®1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(…ß8‹”Ã¤®1
+o
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 25 to the 15 allowed.(˜£é­8ß”Ã¤®1
+W
+java:S1854	"5Remove this useless assignment to local variable "m".(¯íæ¢øÿÿÿÿ8½” ­®1
+A
+java:S1659"Declare "j" on a separate line.(á”æåşÿÿÿÿ8à”Ã¤®1
+H
+java:S1481	"&Remove this unused "m" local variable.(¯íæ¢øÿÿÿÿ8¾” ­®1
+]	java:S125"<This block of commented-out lines of code should be removed.(¡„æñıÿÿÿÿ8Ï§Œ«®1
+]	java:S125"<This block of commented-out lines of code should be removed.(¡„æñıÿÿÿÿ8Ï§Œ«®1
+G	java:S1066"+Replace this use of System.out by a logger.(–ì‘—8â”Ã¤®1
+o
+java:S37769"RRefactor this method to reduce its Cognitive Complexity from 25 to the 15 allowed.(Î¬Ïş8Ÿö©­®1
+W
+java:S1854<"5Remove this useless assignment to local variable "m".(¯íæ¢øÿÿÿÿ8Ÿö©­®1
+A
+java:S1659A"Declare "j" on a separate line.(á”æåşÿÿÿÿ8 ö©­®1
+H
+java:S1481<"&Remove this unused "m" local variable.(¯íæ¢øÿÿÿÿ8ßª­®1
