@@ -1,1 +1,28 @@
+# Ignore compiled binaries and build artifacts
 *.class
+*.jar
+*.war
+*.ear
+target/
+bin/
+build/
+.gradle/
+out/
+
+# Ignore IDE-specific files and directories
+.idea/
+.vscode/
+*.iml
+
+# Ignore system and temporary files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ignore logs and generated documentation
+logs/
+doc/
+
+# Ignore dependency directories (e.g., Node.js modules)
+node_modules/
+bower_components/
