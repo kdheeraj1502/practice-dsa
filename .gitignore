@@ -26,3 +26,6 @@ doc/
 # Ignore dependency directories (e.g., Node.js modules)
 node_modules/
 bower_components/
+
+.idea/sonarlint/issuestore/index.pb
+.idea/sonarlint/securityhotspotstore/index.pb
