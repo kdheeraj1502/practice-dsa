@@ -62,6 +62,16 @@ public class StreamPractice {
 
         System.out.println(result1);
 
+        List<Character> charCountMap = input.chars()
+                .mapToObj(ch -> (char) ch)
+                .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting())).entrySet()
+                .stream().filter(e-> e.getValue()==1L)
+                .map(Map.Entry::getKey)
+                .collect(Collectors.toList());
+
+        System.out.println("all no repeated character is :"+ charCountMap);
+
+
 
         // find the first repeated character in it using Stream functions?
         System.out.println("find the first repeated character in it using Stream functions?");
@@ -157,7 +167,7 @@ public class StreamPractice {
         noteLst.add(new Notes(6, "note4", 66));
 
         Map<String, Integer> resultMap = noteLst.stream().sorted(Comparator.comparingLong(Notes::getId).reversed())
-                .collect(Collectors.toMap(Notes::getName, Notes::getLabel , (oldValue, newValue) -> oldValue, LinkedHashMap::new));
+                .collect(Collectors.toMap(Notes::getName, Notes::getLabel , (oldValue, newValue) -> newValue, LinkedHashMap::new));
 
         System.out.println(resultMap);
 
@@ -170,7 +180,7 @@ public class StreamPractice {
         //How to find only duplicate elements with its count from the String ArrayList in Java8?
         System.out.println("How to find only duplicate elements with its count from the String ArrayList in Java8?");
         List<String> names1 = Arrays.asList("AA", "BB", "AA", "CC");
-        Map<String, Long> result6 = names1.stream().filter(x -> Collections.frequency(names, x)> 1).
+        Map<String, Long> result6 = names1.stream().filter(x -> Collections.frequency(names1, x)> 1).
         collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
         System.out.println(result6);
 

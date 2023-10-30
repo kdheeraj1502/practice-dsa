@@ -12,6 +12,11 @@ public class CountOfChars {
         Map<Object, Integer> charCount = word.chars().boxed()
                 .collect(Collectors.toMap(k -> k, i -> 1, Integer::sum, LinkedHashMap::new));
 
+
         System.out.println(charCount);
+
+        Map<Object, Long> count = word.chars().boxed().collect(Collectors.groupingBy(c ->c , Collectors.counting()));
+        System.out.println(count);
+
     }
 }

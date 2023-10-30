@@ -23,7 +23,6 @@ public class Producer implements Runnable{
     }
 
     private void process() throws InterruptedException {
-        int range = 20;
 
         IntStream.range(0, 20).forEach(n -> {
             System.out.println("[Producer] Put : " + n);

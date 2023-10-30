@@ -1,5 +1,6 @@
 package Thread;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.CountDownLatch;
@@ -17,7 +18,7 @@ public class CountDownLatchEx {
 
         worker.forEach(Thread::start);
 
-        countDownLatch.await();
+            countDownLatch.await();
         outpurScrapper.add("released lock");
 
         System.out.println(outpurScrapper);

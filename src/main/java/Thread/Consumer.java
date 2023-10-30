@@ -18,7 +18,7 @@ public class Consumer implements Runnable{
                 Integer take = que.take();
                 process(take);
                 // if this is a poison pill, break, exit
-                if (take == POISON) {
+                if (take.equals(POISON)) {
                     break;
                 }
             } catch (InterruptedException e) {

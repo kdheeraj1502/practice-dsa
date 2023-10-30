@@ -71,7 +71,6 @@ public class Customer {
 
         public CustomerBuilder setAddress(String address) {
             this.address = address;
-
             return this;
         }
 

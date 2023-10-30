@@ -1,6 +1,6 @@
 public class SingletoneEx {
 
-    private static final SingletoneEx object = null;
+    private static SingletoneEx object = null;
 
     private SingletoneEx(){
 
@@ -8,7 +8,7 @@ public class SingletoneEx {
 
     public static SingletoneEx getInstance(){
         if(object==null){
-            return new SingletoneEx();
+            object =  new SingletoneEx();
         }
         return object;
     }

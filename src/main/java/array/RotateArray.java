@@ -3,35 +3,36 @@ package array;
 import java.util.Arrays;
 
 public class RotateArray {
-    public static int[] rotateArray_right_to_Left(int nums[], int k) {
-
-        reverse(nums, 0, nums.length - k - 1);
-        reverse(nums, nums.length - k, nums.length - 1);
-        reverse(nums, 0, nums.length - 1);
-        return nums;
-    }
-
-    public static int[] rotateArray_Left_to_right(int nums[], int k) {
-
-        reverse(nums, 0, k - 1);
-        reverse(nums, k, nums.length - 1);
-        reverse(nums, 0, nums.length - 1);
-        return nums;
-    }
-
-    private static void reverse(int nums[], int start, int end) {
-        while (start < end) {
-            int temp = nums[start];
-            nums[start++] = nums[end];
-            nums[end--] = temp;
-        }
-    }
 
     public static void main(String[] args) {
-        int nums[] = {9, 6, 15, 3, 24, 2, 1};
-        int k = 2; // 3;
-        System.out.println(Arrays.toString(nums));
-        System.out.println(Arrays.toString(rotateArray_right_to_Left(nums, k)));
-        System.out.println(Arrays.toString(rotateArray_Left_to_right(nums, k)));
+        int[] arr = {1,2,3,4,5};
+        int d = 6;
+        int n= 5;
+        rotateArr(arr, d, n);
+
+        System.out.println(Arrays.toString(arr));
+    }
+
+    static void rotateArr(int[] arr, int d, int n)
+    {
+
+        if (arr == null || arr.length == 0 || d < 0 || n <= 0) {
+            // Handle invalid input, such as null array, negative d or non-positive n.
+            return;
+        }
+        d = d % n;
+
+        int[] temp = new int[d];
+
+        System.arraycopy(arr, 0, temp, 0, d);
+
+        for(int i = 0; i<n-d; i++){
+            arr[i] = arr[i+d];
+        }
+        int j =0;
+        for(int i = n-d ; i< n; i++ ){
+            arr[i] = temp[j];
+            j++;
+        }
     }
 }

@@ -11,14 +11,14 @@ public class ComparableTest{
 
     public static void main(String[] args) {
 
-        List<Employee> emp = new ArrayList<>();
+//        List<Employee> emp = new ArrayList<>();
+//
+//        emp.add(new Employee("test"));
+//        emp.add(new Employee("puja"));
+//        emp.add(new Employee("auja"));
 
-        emp.add(new Employee("test"));
-        emp.add(new Employee("puja"));
-        emp.add(new Employee("auja"));
+       // List<Employee> sortedList = emp.stream().sorted(Comparator.comparing(Employee::getName)).collect(Collectors.toList());
 
-        List<Employee> sortedList = emp.stream().sorted(Comparator.comparing(Employee::getName)).collect(Collectors.toList());
-
-        Optional.of(sortedList).ifPresent(n-> n.forEach(System.out::println));
+        //Optional.of(sortedList).ifPresent(n-> n.forEach(System.out::println));
     }
 }
