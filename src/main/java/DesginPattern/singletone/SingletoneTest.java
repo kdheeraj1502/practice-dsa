@@ -14,7 +14,7 @@ public class SingletoneTest {
         for(int i=0; i<5; i++){
             new Thread(
                     () -> {
-                        SIngletoneAtomic singleton = SIngletoneAtomic.getInstance();
+                        SingletoneAtomic singleton = SingletoneAtomic.getInstance();
                         System.out.println("Instance Hash Code atomic: " + System.identityHashCode(singleton));
                     } ).start();
         }

@@ -20,6 +20,9 @@ public class Test3 {
 
         System.out.println(employee.get());
 
+        boolean ans = (3*0.1 == 0.3);
+        System.out.println(ans);
+
 
     }
 }

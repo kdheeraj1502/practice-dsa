@@ -15,7 +15,7 @@ public class CountOfChars {
 
         System.out.println(charCount);
 
-        Map<Object, Long> count = word.chars().boxed().collect(Collectors.groupingBy(c ->c , Collectors.counting()));
+        Map<Character, Long> count = word.chars().mapToObj(c -> (char)c).collect(Collectors.groupingBy(c ->c , Collectors.counting()));
         System.out.println(count);
 
     }

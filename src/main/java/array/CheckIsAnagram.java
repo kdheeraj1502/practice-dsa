@@ -10,21 +10,23 @@ public class CheckIsAnagram {
         }
 
         for(char ch : t.toCharArray()){
-            if(map.containsKey(ch))
-                map.put(ch, map.get(ch) - 1);
+            if(map.containsKey(ch)){
+                int count = map.get(ch);
+                if(count==1){
+                    map.remove(ch);
+                } else
+                map.put(ch, count - 1);
+            }
+
             else{
                 return false;
             }
         }
-        Collection<Integer> list = map.values();
-        for(int in : list){
-            if(in > 0) return false;
-        }
-        return true;
+        return map.isEmpty();
     }
 
     public static void main(String  [] args) {
-        String s = "a", t = "ab";
+        String s = "aba", t = "ab";
         System.out.println(isAnagram(s, t));
     }
 }

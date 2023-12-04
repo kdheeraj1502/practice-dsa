@@ -17,6 +17,8 @@ public class CharacterCountStreamExample {
                 .mapToObj(c -> (char) c)
                 .collect(Collectors.groupingBy(c -> c, Collectors.counting()));
 
+        System.out.println(counts);
+
         List<CharacterCountPair> characterCountPairs = new ArrayList<>();
         for (Map.Entry<Character, Long> entry : counts.entrySet()) {
             Character character = entry.getKey();

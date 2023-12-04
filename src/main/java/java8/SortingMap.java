@@ -23,7 +23,7 @@ public class SortingMap {
                 sorted(Map.Entry.comparingByKey(Comparator.comparing(Name::getFirstName).reversed()))
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (oldval, newVal) -> oldval, LinkedHashMap::new));
       //  Collections.sort();
-       List<Name>  resultList = map.entrySet().stream().map(m -> m.getKey()).
+       List<Name>  resultList = map.entrySet().stream().map(Map.Entry::getKey).
                sorted(Comparator.comparing(Name::getFirstName).reversed())
                .collect(Collectors.toList());
         System.out.println(resultList);

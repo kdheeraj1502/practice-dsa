@@ -10,7 +10,7 @@ public class FindDuplicateElements {
 
     public static void main(String[] args) {
         Set<Integer> items = new HashSet<>();
-        int nums[] = { 5, 13, 4, 21, 13, 27, 2, 59, 59, 34 };
+        int[] nums = { 5, 13, 4, 21, 13, 27, 2, 59, 59, 34 };
         System.out.println(Arrays.stream(nums).boxed().filter(n -> !items.add(n))
                 .collect(Collectors.toSet()));
 
@@ -24,7 +24,7 @@ public class FindDuplicateElements {
 
        List<Integer> duplicates =  Arrays.stream(nums).boxed()
                 .collect(Collectors.groupingBy(Function.identity(),LinkedHashMap::new, Collectors.counting()))
-                        .entrySet().stream().filter(entry -> entry.getValue()>1l)
+                        .entrySet().stream().filter(entry -> entry.getValue()> 1L)
                         .map(Map.Entry::getKey)
                                 .collect(Collectors.toList());
 
