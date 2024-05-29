@@ -19,6 +19,7 @@ public class StreamExample {
 
        Optional<Employee> ans = employees.parallelStream().filter(e -> e.getFirstName().equalsIgnoreCase("Kyle")).findAny();
 
+
 //        //Filter Method - filter employee who as gender as MALE
 //         employees.stream()
 //                .filter(employee -> employee.getGender().equalsIgnoreCase("Male"))
